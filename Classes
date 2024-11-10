@@ -1,0 +1,38 @@
+
+class Heroi {
+    constructor(nome, idade, tipo) {
+        this.nome = nome;
+        this.idade = idade;
+        this.tipo = tipo;
+    }
+
+    atacar() {
+        let ataque = this.definirAtaque()
+        console.log(`O ${this.tipo} atacou usando ${ataque}`)
+    }
+
+    definirAtaque() {
+        switch(this.tipo) {
+            case 'mago':
+                return 'magia'
+            case 'guerreiro':
+                return 'espada'
+            case 'monge':
+                return 'artes marciais'
+            case 'ninja':
+                return 'shuriken'
+            default:
+                return 'não possui ataque definido'
+        }
+    }
+}
+
+const heroiMago = new Heroi('Merlin', 100, 'mago')
+const heroiGuerreiro = new Heroi('Arthur', 35, 'guerreiro')
+const heroiMonge = new Heroi('Lee', 45, 'monge')
+const heroiNinja = new Heroi('Hanzo', 30, 'ninja')
+
+heroiMago.atacar()     
+heroiGuerreiro.atacar() 
+heroiMonge.atacar()     
+heroiNinja.atacar()     
